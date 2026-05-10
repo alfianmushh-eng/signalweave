@@ -1,41 +1,31 @@
 # Changelog
 
-## [0.2.0] - 2026-05-29
+## 0.3.0 — 2026-06-03
 
 ### Added
-- Extra generators: sawtooth, triangle, pulse train, AM, FM
-- Extra filters: FIR, median, Savitzky-Golay, bandstop
-- Filter design: frequency response, group delay analysis
-- Advanced spectral: STFT, mel-spectrogram, MFCC, cepstrum
-- Advanced features: spectral centroid, bandwidth, rolloff, flatness
-- Envelope detection: Hilbert, peak, RMS
-- Cross-correlation, auto-correlation, convolution
-- Resampling: sample rate conversion, decimate, interpolate
-- Streaming: RingBuffer, OnlineRMS
-- Audio I/O: WAV read/write, load with resampling
-- Signal normalization: peak, RMS, DC removal
-- Silence detection and segmentation
-- Onset/transient detection via spectral flux
-- Harmonic analysis: HPS, fundamental frequency
-- Phase vocoder utilities
-- Colored noise: pink, brown, blue
-- Dithering and quantization
-- Signal statistics: crest factor, form factor, skewness
-- Time-domain features
-- Visualization: waveform, spectrogram, filter response
-- Extended CLI: correlate, envelope, info commands
-- Integration test suite
-- Pipeline demo example
+- Wavelet transforms: Haar DWT/IDWT, multi-level via PyWavelets, denoising with universal threshold.
+- Kalman filters: 1D scalar and 2D constant-velocity tracker.
+- Beamforming: delay-and-sum, ULA steering vectors.
+- Direction-of-arrival: MUSIC pseudo-spectrum and conventional beamformer.
+- Pitch detection: autocorrelation and YIN-lite.
+- Cepstral analysis: real/complex cepstrum, cepstral pitch detector.
+- Hilbert tools: analytic signal, instantaneous phase and frequency, envelope.
+- Peak detection with height/distance/prominence constraints, plus peak widths.
+- Zero-crossing rate and fundamental period estimation.
+- Wiener filtering and spectral subtraction.
+- Chirp-Z transform and zoom-FFT.
+- K-means clustering for feature segmentation.
+- Empirical Mode Decomposition with cubic-spline envelopes.
+- New examples: Kalman tracking, beamforming + DOA demo.
 
-All notable changes to this project will be documented in this file.
-
-## [0.1.0] - 2026-05-24
+## 0.2.0 — 2026-05-25
 
 ### Added
-- `generators` module: sine, square, chirp, white noise signal synthesis
-- `windows` module: Hann/Hamming/Blackman/Bartlett windows and overlapping framing
-- `filtering` module: Butterworth IIR lowpass/highpass/bandpass/notch, moving average
-- `spectral` module: spectrogram, periodogram PSD, and peak finding
-- `features` module: RMS, ZCR, peak-to-peak, energy, mean/std/min/max, sliding-window feature frames
-- `signalweave` CLI with `gen`, `frame`, `features`, and `spectrogram` subcommands
-- `examples/ecg_like.py` synthetic ECG signal walkthrough
+- FIR/IIR filter helpers, spectral feature suite, framing, MFCC.
+- Adaptive filters (LMS, NLMS), dynamics compressor, impulse-response convolution.
+- Filter design utilities and signal generators.
+- Streaming ring buffer and WAV I/O.
+
+## 0.1.0 — 2026-05-17
+
+Initial release.

@@ -38,6 +38,22 @@ feature extraction without wiring up a full audio DSP chain.
 | `signalweave.viz`                | Waveform, spectrogram, filter response plots               |
 | `signalweave.cli`                | `signalweave gen`, `frame`, `features`, `spectrogram`      |
 | `signalweave.cli_extra`          | `correlate`, `envelope`, `info` commands                   |
+| `signalweave.wavelet`            | Haar DWT/IDWT, multi-level DWT via PyWavelets              |
+| `signalweave.wavelet_denoise`    | Soft/hard thresholding with universal threshold             |
+| `signalweave.kalman`             | 1D Kalman filter for noisy scalar measurements              |
+| `signalweave.kalman_cv`          | Constant-velocity 2D Kalman filter (position+velocity)     |
+| `signalweave.beamforming`        | Delay-and-sum for ULA, narrowband steering vectors          |
+| `signalweave.doa`                | MUSIC pseudo-spectrum, conventional DOA                     |
+| `signalweave.pitch`              | Autocorrelation and YIN-lite pitch detectors               |
+| `signalweave.cepstrum`           | Real/ complex cepstrum, cepstral pitch                      |
+| `signalweave.hilbert_tools`      | Analytic signal, envelope, instantaneous phase / frequency  |
+| `signalweave.peaks`              | Peak detection with height/distance/prominence constraints  |
+| `signalweave.zerocross`          | Zero-crossing rate, fundamental period from ZC              |
+| `signalweave.wiener`             | Frequency-domain Wiener filter, spectral subtraction        |
+| `signalweave.czt`                | Chirp-Z transform, zoom-FFT                                 |
+| `signalweave.emd`                | Empirical Mode Decomposition with cubic-spline envelopes    |
+| `signalweave.cluster`            | Lightweight k-means for signal-feature segmentation         |
+| `signalweave._extended_exports`  | Consolidated re-exports for all v0.3.0 additions            |
 
 ## Install
 
@@ -76,6 +92,8 @@ signalweave features signal.txt --size 256 --hop 128 --names rms,zcr
 
 ```bash
 python examples/ecg_like.py
+python examples/kalman_tracking.py
+python examples/beamforming_demo.py
 ```
 
 ## Development
@@ -88,4 +106,4 @@ ruff check src tests
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
