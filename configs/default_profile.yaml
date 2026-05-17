@@ -1,0 +1,10 @@
+signalweave_profile:
+  fft_size: 2048
+  hop_size: 512
+  window: hann
+  sample_rate: 16000
+  features:
+    - rms
+    - zcr
+    - spectral_centroid
+    - spectral_bandwidth
