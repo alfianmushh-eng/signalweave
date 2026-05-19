@@ -9,14 +9,35 @@ feature extraction without wiring up a full audio DSP chain.
 
 ## Modules
 
-| Module                  | Purpose                                                    |
-| ----------------------- | ---------------------------------------------------------- |
-| `signalweave.generators` | Test signal synthesis: sine, square, chirp, white noise    |
-| `signalweave.windows`    | Hann / Hamming / Blackman / Bartlett windows + framing     |
-| `signalweave.filtering`  | Butterworth IIR lowpass/highpass/bandpass/notch, MA filter |
-| `signalweave.spectral`   | Spectrogram, periodogram PSD, peak finding                 |
-| `signalweave.features`   | Sliding-window RMS, ZCR, energy, peak-to-peak, stats       |
-| `signalweave.cli`        | `signalweave gen`, `frame`, `features`, `spectrogram`      |
+| Module                          | Purpose                                                    |
+| ------------------------------- | ---------------------------------------------------------- |
+| `signalweave.generators`         | Test signal synthesis: sine, square, chirp, white noise    |
+| `signalweave.generators_extra`   | Sawtooth, triangle, pulse train, AM, FM modulation         |
+| `signalweave.windows`            | Hann / Hamming / Blackman / Bartlett windows + framing     |
+| `signalweave.filtering`          | Butterworth IIR lowpass/highpass/bandpass/notch, MA filter |
+| `signalweave.filters_extra`      | FIR, median, Savitzky-Golay, bandstop                      |
+| `signalweave.filter_design`      | Frequency response, group delay                            |
+| `signalweave.spectral`           | Spectrogram, periodogram PSD, peak finding                 |
+| `signalweave.spectral_extra`     | STFT, mel-spectrogram, MFCC, cepstrum                      |
+| `signalweave.features`           | Sliding-window RMS, ZCR, energy, peak-to-peak, stats       |
+| `signalweave.features_extra`     | Spectral centroid, bandwidth, rolloff, flatness            |
+| `signalweave.time_features`      | Peak-to-peak, energy ratio, ZC density                     |
+| `signalweave.envelope`           | Hilbert, peak, RMS envelope detection                      |
+| `signalweave.correlation`        | Cross-correlation, auto-correlation, convolution           |
+| `signalweave.resample`           | Sample rate conversion, decimate, interpolate              |
+| `signalweave.streaming`          | RingBuffer, OnlineRMS for online processing                |
+| `signalweave.audio_io`           | WAV read/write, resampling load                            |
+| `signalweave.normalize`          | Peak, RMS, DC removal normalization                        |
+| `signalweave.segment`            | Silence detection, split on silence                        |
+| `signalweave.harmonic`           | HPS, fundamental frequency estimation                      |
+| `signalweave.onset`              | Spectral flux onset detection                              |
+| `signalweave.phase`              | Phase unwrap, instantaneous frequency, time stretch        |
+| `signalweave.colored_noise`      | Pink, brown, blue noise generators                         |
+| `signalweave.dither`             | Dithering, quantization                                    |
+| `signalweave.statistics`         | Crest factor, form factor, skewness, kurtosis              |
+| `signalweave.viz`                | Waveform, spectrogram, filter response plots               |
+| `signalweave.cli`                | `signalweave gen`, `frame`, `features`, `spectrogram`      |
+| `signalweave.cli_extra`          | `correlate`, `envelope`, `info` commands                   |
 
 ## Install
 
